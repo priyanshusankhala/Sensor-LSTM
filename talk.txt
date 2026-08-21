@@ -1,0 +1,56 @@
+conda activate wsn-compression
+
+
+@14. Aug. 26
+Dataset - Intel lab Dataset 54 motes(~2.3 million reading, one reading every 31 seconds) Window size = 25, LSTM of single layer 32 units
+date | time | epoch | moteid | temperature | humidity | light | voltage
+
+Shape: (2313682, 8)
+
+--- Data types ---
+date            object
+time            object
+epoch            int64
+moteid         float64
+temperature    float64
+humidity       float64
+light          float64
+voltage        float64
+dtype: object
+
+--- Missing values per column ---
+date               0
+time               0
+epoch              0
+moteid           526
+temperature      526
+humidity         899
+light            903
+voltage        93879
+dtype: int64
+
+--- Basic stats ---
+        temperature      humidity         light       voltage
+count  2.313156e+06  2.312783e+06  2.312779e+06  2.219803e+06
+mean   3.920103e+01  3.390809e+01  3.909430e+02  2.490634e+00
+std    3.741915e+01  1.732155e+01  5.344185e+02  1.784080e-01
+min   -3.840000e+01 -8.983130e+03  0.000000e+00  9.100830e-03
+25%    2.040980e+01  3.187760e+01  1.840000e+01  2.385220e+00
+50%    2.243840e+01  3.928030e+01  1.435200e+02  2.527320e+00
+75%    2.701500e+01  4.358550e+01  5.078400e+02  2.627960e+00
+max    3.855680e+02  1.375120e+02  1.847360e+03  3.159150e+00
+
+--- moteid range ---
+1.0 to 65407.0 | unique motes: 61
+
+dual prediction scheme
+remove those - rows, atleast for one of the older approach compare independently LSTM pairs sensor data. 
+joint for each data completed only rows which  - 
+remove voltage column - 
+window size - analyse which window size is best for our data.// have some visulilzaiton -
+relative improvemnt - only for the voltage / remove timeseries split and analyse that how much is the imporvemtn and losss
+
+Data set - another dataset - drones type of data, x,y dataset robotics driver less vehicles, what are they sensing, IoT devices - what could be benefit like this outside of IoT
+what compression we could use to reduce the error - checking the final error tell what compression we can use - draw the tradeoff-  per channel - 
+train co-relation between temp, light and humidity maybe we can get higher compression.
+Friday 10:30 

@@ -1,0 +1,6 @@
+tensorflow==2.15.0        # includes Keras + TFLite converter
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2       # MinMaxScaler, metrics, train/test split
+matplotlib==3.8.4         # for the MSE/R²/MAE plots (Figs 4.3–4.9)
+scipy==1.13.0             # OLS line fitting (Eq. 5.3, 5.5)
